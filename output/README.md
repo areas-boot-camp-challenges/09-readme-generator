@@ -1,7 +1,9 @@
-# The Dopeness
+# stacy-project
 ## Description
-You cannot even imagine what you’re about to experience. 😈
+FGFGFGHFGHFGHFG
 
+
+![MIT License Badge](https://img.shields.io/github/license/stacy/stacy-test)
 
 ## Table of Contents
 - [Features](#features)
@@ -14,9 +16,11 @@ You cannot even imagine what you’re about to experience. 😈
 - [Tests](#tests)
 - [Questions](#questions)
 
-
 ## Features
-{features}
+test
+test
+test
+
 
 ## Installation
 
@@ -25,14 +29,10 @@ You cannot even imagine what you’re about to experience. 😈
 
 
 ## Credits
-{credits}
+
 
 ## License
-See [LICENSE](./LICENSE).MIT
-
-
-## Badges
-{badges}
+See [LICENSE (MIT)](./LICENSE).
 
 ## Contribute
 
@@ -43,5 +43,5 @@ See [LICENSE](./LICENSE).MIT
 ## Questions
 Reach out with questions:
 
-- GitHub: [github.com/christianareas](https://github.com/christianareas)
-- Email: [me@areas.me](mailto:me@areas.me)
+- GitHub: [github.com/stacy](https://github.com/stacy)
+- Email: [stacytest@test.com](mailto:stacytest@test.com)

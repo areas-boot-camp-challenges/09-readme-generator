@@ -2,6 +2,8 @@
 ## Description
 {description}
 
+![{license} License Badge](https://img.shields.io/github/license/{username}/{repo})
+
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
@@ -26,10 +28,7 @@
 {credits}
 
 ## License
-See [{license}](./LICENSE).
-
-## Badges
-{badges}
+See [LICENSE ({license})](./LICENSE).
 
 ## Contribute
 {contribute}
@@ -40,5 +39,5 @@ See [{license}](./LICENSE).
 ## Questions
 Reach out with questions:
 
-- GitHub: [github.com/{github}](https://github.com/{github})
+- GitHub: [github.com/{username}](https://github.com/{username})
 - Email: [{email}](mailto:{email})

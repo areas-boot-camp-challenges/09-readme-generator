@@ -10,15 +10,15 @@
 //     THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 // [x] WHEN I enter my project title
 //     THEN this is displayed as the title of the README
-// [ ] WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+// [x] WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
 //     THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-// [ ] WHEN I choose a license for my application from a list of options
+// [x] WHEN I choose a license for my application from a list of options
 //     THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-// [ ] WHEN I enter my GitHub username
+// [x] WHEN I enter my GitHub username
 //     THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-// [ ] WHEN I enter my email address
+// [x] WHEN I enter my email address
 //     THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-// [ ] WHEN I click on the links in the Table of Contents
+// [x] WHEN I click on the links in the Table of Contents
 //     THEN I am taken to the corresponding section of the README
 
 const fs = require ("fs")
@@ -26,6 +26,22 @@ const inquire = require ("inquirer")
 
 // Prompts.
 const prompts = [
+  { message: "Enter your GitHub username.",
+    type:    "input",
+    name:    "username",
+    validate(answer) {
+      if (!answer) { return "Please enter your GitHub username." }
+      else { return true }
+    },
+  },
+  { message: "Enter your project’s GitHub repo name.",
+    type:    "input",
+    name:    "repo",
+    validate(answer) {
+      if (!answer) { return "Please enter your project’s GitHub repo." }
+      else { return true }
+    },
+  },
   { message: "Enter your project’s name.",
     type:    "input",
     name:    "name",
@@ -71,14 +87,6 @@ const prompts = [
     choices: ["GNU GPLv3", "MIT"],
     name:    "license",
   },
-  { message: "Enter your GitHub username.",
-    type:    "input",
-    name:    "github",
-    validate(answer) {
-      if (!answer) { return "Please enter your GitHub username." }
-      else { return true }
-    },
-  },
   { message: "Enter your email address.",
     type:    "input",
     name:    "email",
@@ -96,13 +104,19 @@ function promptAndWrite() {
   .prompt(prompts)
   .then((answers) => {
     console.log(answers) // **
-    // Read the template file and save it to new varialbe.
+    // Read the template README file and save it to new varialbe.
     let template = fs.readFileSync("./input/README.md", "utf8")
+    // Copy the appropriate LICENSE file to the output folder.
+    if (answers.license === "GNU GPLv3") {
+      fs.copyFileSync("./input/licenses/GNU GPLv3", "./output/LICENSE")
+    } else if (answers.license === "MIT") {
+      fs.copyFileSync("./input/licenses/MIT", "./output/LICENSE")
+    }
     // Replace all template values with user’s answers.
     for (const [key, value] of Object.entries(answers)) {
       template = template.replaceAll(`{${key}}`, value)
     }
-    // Write result to a new file.
+    // Write the result to the output folder.
     fs.writeFileSync("./output/README.md", template)
   })
 }
