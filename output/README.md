@@ -1,44 +1,38 @@
 # The Dopeness
-No one can challenge **The Dopeness**. This is the best project you‘ve never heard of. Take note and be one of the first in the know.
 
-See you on the other side.
-
+## Description
+This is better than you could ever imagine.
 
 
 ## Table of Contents
 - []()
 
+## Features
+{features}
 
 ## Installation
-Install it.
 
 
 ## Usage
-Use it.
 
 
 ## Credits
 {credits}
 
-
 ## License
 MIT
-
 
 ## Badges
 {badges}
 
-
-## Features
-{features}
-
 ## Contribute
-Contribute.
-
-Test it.
 
 
-## Contact
+## Tests
 
-- GitHub: christianareas
-- Email: me@areas.me
+
+## Questions
+Reach out with questions:
+
+- GitHub: [github.com/christianareas](https://github.com/christianareas)
+- Email: [me@areas.me](mailto:me@areas.me)

@@ -1,41 +1,44 @@
 # {name}
+## Description
 {description}
 
-
 ## Table of Contents
-- []()
-
-
-## Installation
-{install}
-
-
-## Usage
-{use}
-
-
-## Credits
-{credits}
-
-
-## License
-{license}
-
-
-## Badges
-{badges}
-
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Badges](#badges)
+- [Contribute](#contribute)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Features
 {features}
 
+## Installation
+{installation}
+
+## Usage
+{usage}
+
+## Credits
+{credits}
+
+## License
+{license}
+
+## Badges
+{badges}
+
 ## Contribute
 {contribute}
 
-{test}
+## Tests
+{tests}
 
+## Questions
+Reach out with questions:
 
-## Contact
-
-- GitHub: {github}
-- Email: {email}
+- GitHub: [github.com/{github}](https://github.com/{github})
+- Email: [{email}](mailto:{email})
