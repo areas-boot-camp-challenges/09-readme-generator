@@ -30,23 +30,21 @@ const prompts = [
     type:    "input",
     name:    "name",
     validate(answer) {
-      if (!answer) {
-        return "Please enter your project’s name."
-      } else {
-        return true
-      }
+      if (!answer) { return "Please enter your project’s name." }
+      else { return true }
     },
   },
   { message: "Enter a description.",
     type:    "editor",
     name:    "description",
     validate(answer) {
-      if (!answer) {
-        return "Please enter a description."
-      } else {
-        return true
-      }
+      if (!answer) { return "Please enter a description." }
+      else { return true }
     },
+  },
+  { message: "List your project’s features.",
+    type:    "editor",
+    name:    "features",
   },
   { message: "Tell others how to install your project.",
     type:    "editor",
@@ -55,6 +53,10 @@ const prompts = [
   { message: "Tell others how to use your project.",
     type:    "editor",
     name:    "usage",
+  },
+  { message: "Tell others who deserves credit.",
+    type:    "editor",
+    name:    "credits",
   },
   { message: "Tell others how to contribute to your project.",
     type:    "editor",
@@ -66,18 +68,15 @@ const prompts = [
   },
   { message: "Choose a license.",
     type:    "list",
-    choices: ["MIT"],
+    choices: ["GNU GPLv3", "MIT"],
     name:    "license",
   },
   { message: "Enter your GitHub username.",
     type:    "input",
     name:    "github",
     validate(answer) {
-      if (!answer) {
-        return "Please enter your GitHub username."
-      } else {
-        return true
-      }
+      if (!answer) { return "Please enter your GitHub username." }
+      else { return true }
     },
   },
   { message: "Enter your email address.",
@@ -85,11 +84,8 @@ const prompts = [
     name:    "email",
     validate(answer) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-      if (!emailRegex.test(answer)) {
-        return "Enter a valid email address."
-      } else {
-        return true
-      }
+      if (!emailRegex.test(answer)) { return "Enter a valid email address." }
+      else { return true }
     },
   },
 ]
@@ -99,6 +95,7 @@ function promptAndWrite() {
   inquire
   .prompt(prompts)
   .then((answers) => {
+    console.log(answers) // **
     // Read the template file and save it to new varialbe.
     let template = fs.readFileSync("./input/README.md", "utf8")
     // Replace all template values with user’s answers.

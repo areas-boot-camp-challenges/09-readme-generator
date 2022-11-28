@@ -26,7 +26,7 @@
 {credits}
 
 ## License
-{license}
+See [{license}](./LICENSE).
 
 ## Badges
 {badges}

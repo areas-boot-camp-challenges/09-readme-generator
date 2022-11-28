@@ -1,11 +1,19 @@
 # The Dopeness
-
 ## Description
-This is better than you could ever imagine.
+You cannot even imagine what you’re about to experience. 😈
 
 
 ## Table of Contents
-- []()
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Badges](#badges)
+- [Contribute](#contribute)
+- [Tests](#tests)
+- [Questions](#questions)
+
 
 ## Features
 {features}
@@ -20,7 +28,8 @@ This is better than you could ever imagine.
 {credits}
 
 ## License
-MIT
+See [LICENSE](./LICENSE).MIT
+
 
 ## Badges
 {badges}
