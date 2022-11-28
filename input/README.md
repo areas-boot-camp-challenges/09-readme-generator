@@ -2,6 +2,8 @@
 ## Description
 {description}
 
+<!-- if appropriate, think about adding a screenshot ![image-alt](image-url) -->
+
 ![{license} License Badge](https://img.shields.io/github/license/{username}/{repo})
 
 ## Table of Contents
