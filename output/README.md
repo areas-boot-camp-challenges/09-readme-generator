@@ -1,11 +1,11 @@
-# The Dopeness
+# README Generator
 ## Description
-You can’t mess with this shit.
+The best README generator on the planet.
 
 
-<!-- if appropriate, think about adding a screenshot ![image-alt](image-url) -->
+<!-- if appropriate, add a screenshot ![image-alt](image-url) -->
 
-![GNU GPLv3 License Badge](https://img.shields.io/github/license/christianareas/the-dopeness)
+![GNU GPLv3 License Badge](https://img.shields.io/github/license/areas-boot-camp/09-readme-generator)
 
 ## Table of Contents
 - [Features](#features)
@@ -19,28 +19,40 @@ You can’t mess with this shit.
 - [Questions](#questions)
 
 ## Features
+- Generates a README for you.
+- Includes great defaults to guide you.
+- Will throw in the right license for you.
 
 
 ## Installation
+1. Clone the repo.
+2. Run `npm install`.
+3. From the root folder, run `node index.js`.
 
 
 ## Usage
+Use it!
 
 
 ## Credits
-Credit where credit is due.
+- UC Berkeley Boot Camp
+- Node.js
+- Inquirer
+
 
 ## License
 See [LICENSE (GNU GPLv3)](./LICENSE).
 
 ## Contribute
+Contribute!
 
 
 ## Tests
+Open a PR!
 
 
 ## Questions
 Reach out with questions:
 
-- GitHub: [github.com/christianareas](https://github.com/christianareas)
+- GitHub: [github.com/{username}](https://github.com/areas-boot-camp)
 - Email: [me@areas.me](mailto:me@areas.me)

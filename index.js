@@ -26,15 +26,15 @@ const inquire = require ("inquirer")
 
 // Prompts.
 const prompts = [
-  { message: "Enter your GitHub username.",
+  { message: "Enter the GitHub user or org that owns your project.",
     type:    "input",
-    name:    "username",
+    name:    "owner",
     validate(answer) {
-      if (!answer) { return "Please enter your GitHub username." }
+      if (!answer) { return "Please enter the GitHub user or org." }
       else { return true }
     },
   },
-  { message: "Enter your project’s GitHub repo name.",
+  { message: "Enter your project’s GitHub repo.",
     type:    "input",
     name:    "repo",
     validate(answer) {
@@ -53,6 +53,7 @@ const prompts = [
   { message: "Enter a description.",
     type:    "editor",
     name:    "description",
+    default: "", // todo
     validate(answer) {
       if (!answer) { return "Please enter a description." }
       else { return true }
@@ -61,27 +62,38 @@ const prompts = [
   { message: "List your project’s features.",
     type:    "editor",
     name:    "features",
+    default:
+      "- Feature 1\n" +
+      "- Feature 2\n" +
+      "- Feature 3",
   },
   { message: "Tell others how to install your project.",
     type:    "editor",
     name:    "installation",
+    default:
+      "1. Step 1\n" +
+      "2. Step 2\n" +
+      "3. Step 3",
   },
   { message: "Tell others how to use your project.",
     type:    "editor",
     name:    "usage",
+    default: "", // todo
   },
   { message: "Tell others who deserves credit.",
     type:    "editor",
     name:    "credits",
-    default: "Credit where credit is due."
+    default: "", // todo
   },
   { message: "Tell others how to contribute to your project.",
     type:    "editor",
     name:    "contribute",
+    default: "", // todo
   },
   { message: "Tell others how to test their contributions.",
     type:    "editor",
     name:    "tests",
+    default: "", // todo
   },
   { message: "Choose a license.",
     type:    "list",
@@ -104,23 +116,25 @@ function promptAndWrite() {
   inquire
   .prompt(prompts)
   .then((answers) => {
-    // Read the template README file and save it to new varialbe.
+    // Read the template README and save it to new varialbe.
     let template = fs.readFileSync("./input/README.md", "utf8")
-    // Replace all template values with user’s answers.
+    // Replace all template values with the user’s answers.
     for (const [key, value] of Object.entries(answers)) {
       template = template.replaceAll(`{${key}}`, value)
     }
-    // Write the result to the output folder.
+    // Write the new README to the output folder.
     fs.writeFileSync("./output/README.md", template)
-    // Copy the appropriate LICENSE file to the output folder.
+    // Copy the appropriate LICENSE to the output folder.
     if (answers.license === "GNU GPLv3") {
       fs.copyFileSync("./input/licenses/GNU GPLv3", "./output/LICENSE")
     } else if (answers.license === "MIT") {
       fs.copyFileSync("./input/licenses/MIT", "./output/LICENSE")
     }
-    console.log(answers) // ** todo: consolidate with thank-you message (summary + thank you)
-    // Thank you message.
-    console.log("Thank you for using the **README Generator**! Your README and LICENSE are in the output/ folder.")
+    // Print a thank-you message and summary.
+    console.log(
+      "Thank you for using the README Generator. Your README and LICENSE are in the output/ folder! Here’s a summary of your answers:"
+    )
+    console.log(answers)
   })
 }
 
