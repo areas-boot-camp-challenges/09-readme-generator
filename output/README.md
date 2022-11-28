@@ -1,9 +1,11 @@
-# stacy-project
+# The Dopeness
 ## Description
-FGFGFGHFGHFGHFG
+You can’t mess with this shit.
 
 
-![MIT License Badge](https://img.shields.io/github/license/stacy/stacy-test)
+<!-- if appropriate, think about adding a screenshot ![image-alt](image-url) -->
+
+![GNU GPLv3 License Badge](https://img.shields.io/github/license/christianareas/the-dopeness)
 
 ## Table of Contents
 - [Features](#features)
@@ -17,9 +19,6 @@ FGFGFGHFGHFGHFG
 - [Questions](#questions)
 
 ## Features
-test
-test
-test
 
 
 ## Installation
@@ -29,10 +28,10 @@ test
 
 
 ## Credits
-
+Credit where credit is due.
 
 ## License
-See [LICENSE (MIT)](./LICENSE).
+See [LICENSE (GNU GPLv3)](./LICENSE).
 
 ## Contribute
 
@@ -43,5 +42,5 @@ See [LICENSE (MIT)](./LICENSE).
 ## Questions
 Reach out with questions:
 
-- GitHub: [github.com/stacy](https://github.com/stacy)
-- Email: [stacytest@test.com](mailto:stacytest@test.com)
+- GitHub: [github.com/christianareas](https://github.com/christianareas)
+- Email: [me@areas.me](mailto:me@areas.me)

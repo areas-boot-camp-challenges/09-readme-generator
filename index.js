@@ -6,7 +6,7 @@
 // SO THAT I can quickly create a professional README for a new project
 //
 // GIVEN a command-line application that accepts user input:
-// [ ] WHEN I am prompted for information about my application repository
+// [x] WHEN I am prompted for information about my application repository
 //     THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 // [x] WHEN I enter my project title
 //     THEN this is displayed as the title of the README
@@ -73,6 +73,7 @@ const prompts = [
   { message: "Tell others who deserves credit.",
     type:    "editor",
     name:    "credits",
+    default: "Credit where credit is due."
   },
   { message: "Tell others how to contribute to your project.",
     type:    "editor",
@@ -103,21 +104,23 @@ function promptAndWrite() {
   inquire
   .prompt(prompts)
   .then((answers) => {
-    console.log(answers) // **
     // Read the template README file and save it to new varialbe.
     let template = fs.readFileSync("./input/README.md", "utf8")
-    // Copy the appropriate LICENSE file to the output folder.
-    if (answers.license === "GNU GPLv3") {
-      fs.copyFileSync("./input/licenses/GNU GPLv3", "./output/LICENSE")
-    } else if (answers.license === "MIT") {
-      fs.copyFileSync("./input/licenses/MIT", "./output/LICENSE")
-    }
     // Replace all template values with user’s answers.
     for (const [key, value] of Object.entries(answers)) {
       template = template.replaceAll(`{${key}}`, value)
     }
     // Write the result to the output folder.
     fs.writeFileSync("./output/README.md", template)
+    // Copy the appropriate LICENSE file to the output folder.
+    if (answers.license === "GNU GPLv3") {
+      fs.copyFileSync("./input/licenses/GNU GPLv3", "./output/LICENSE")
+    } else if (answers.license === "MIT") {
+      fs.copyFileSync("./input/licenses/MIT", "./output/LICENSE")
+    }
+    console.log(answers) // ** todo: consolidate with thank-you message (summary + thank you)
+    // Thank you message.
+    console.log("Thank you for using the **README Generator**! Your README and LICENSE are in the output/ folder.")
   })
 }
 
