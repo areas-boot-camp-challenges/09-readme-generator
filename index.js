@@ -132,7 +132,8 @@ function promptAndWrite() {
     }
     // Print a thank-you message and summary.
     console.log(
-      "Thank you for using the README Generator. Your README and LICENSE are in the output/ folder! Here’s a summary of your answers:"
+      "Thank you for using the README Generator. Your README and LICENSE are in the output/ folder!\n" +
+      "Here’s a summary of your answers:"
     )
     console.log(answers)
   })
