@@ -30,7 +30,7 @@ const prompts = [
     type:    "input",
     name:    "owner",
     validate(answer) {
-      if (!answer) { return "Please enter the GitHub user or org." }
+      if (!answer) { return "Please enter a user or org." }
       else { return true }
     },
   },
@@ -38,7 +38,16 @@ const prompts = [
     type:    "input",
     name:    "repo",
     validate(answer) {
-      if (!answer) { return "Please enter your project’s GitHub repo." }
+      if (!answer) { return "Please enter a repo." }
+      else { return true }
+    },
+  },
+  { message: "Enter your project’s contact email address.",
+    type:    "input",
+    name:    "email",
+    validate(answer) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      if (!emailRegex.test(answer)) { return "Please enter a valid email address." }
       else { return true }
     },
   },
@@ -46,11 +55,11 @@ const prompts = [
     type:    "input",
     name:    "name",
     validate(answer) {
-      if (!answer) { return "Please enter your project’s name." }
+      if (!answer) { return "Please enter a name." }
       else { return true }
     },
   },
-  { message: "Enter a description.",
+  { message: "Enter your project’s description.",
     type:    "editor",
     name:    "description",
     default: "", // todo
@@ -80,11 +89,6 @@ const prompts = [
     name:    "usage",
     default: "", // todo
   },
-  { message: "Tell others who deserves credit.",
-    type:    "editor",
-    name:    "credits",
-    default: "", // todo
-  },
   { message: "Tell others how to contribute to your project.",
     type:    "editor",
     name:    "contribute",
@@ -95,19 +99,15 @@ const prompts = [
     name:    "tests",
     default: "", // todo
   },
+  { message: "Tell others who deserves credit.",
+    type:    "editor",
+    name:    "credits",
+    default: "", // todo
+  },
   { message: "Choose a license.",
     type:    "list",
     choices: ["GNU GPLv3", "MIT"],
     name:    "license",
-  },
-  { message: "Enter your email address.",
-    type:    "input",
-    name:    "email",
-    validate(answer) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-      if (!emailRegex.test(answer)) { return "Enter a valid email address." }
-      else { return true }
-    },
   },
 ]
 

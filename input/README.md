@@ -26,17 +26,17 @@
 ## Usage
 {usage}
 
-## Credits
-{credits}
-
-## License
-See [LICENSE ({license})](./LICENSE).
-
 ## Contribute
 {contribute}
 
 ## Tests
 {tests}
+
+## Credits
+{credits}
+
+## License
+See [LICENSE ({license})](./LICENSE).
 
 ## Questions
 Reach out with questions:
