@@ -1,10 +1,10 @@
 # README Generator
 ## Description
-The best README generator around.
+A README Generator that doesn’t suck.
 
 <!-- if appropriate, add a screenshot ![image-alt](image-url) -->
 
-![GNU GPLv3 License Badge](https://img.shields.io/github/license/areas-boot-camp/09-readme-generator)
+{![GNU GPLv3 License Badge](https://img.shields.io/github/license/areas-boot-camp/09-readme-generator)}
 
 
 ## Table of Contents
@@ -21,7 +21,7 @@ The best README generator around.
 ## Features
 - Generates a professional, comprehensive README.
 - Includes a LICENSE.
-- Provides you with great guidance.
+- Provides you with boilerplate content and guidance.
 
 
 ## Installation
@@ -37,6 +37,7 @@ Open a PR or send me a message.
 
 
 ## Tests
+Try it before you open a PR.
 
 
 ## Credits
@@ -48,8 +49,9 @@ Open a PR or send me a message.
 ## License
 See [LICENSE (GNU GPLv3)](./LICENSE).
 
+
 ## Questions
 Reach out with questions:
 
 - GitHub: [github.com/areas-boot-camp](https://github.com/areas-boot-camp)
-- Email: [me@areas..me](mailto:me@areas..me)
+- Email: [me@areas.me](mailto:me@areas.me)
