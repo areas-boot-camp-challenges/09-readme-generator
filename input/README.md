@@ -3,7 +3,7 @@
 {description}
 <!-- if appropriate, add a screenshot ![image-alt](image-url) -->
 
-{![{license} License Badge](https://img.shields.io/github/license/{owner}/{repo})}
+![{license} License Badge](https://img.shields.io/github/license/{owner}/{repo})
 
 
 ## Table of Contents
