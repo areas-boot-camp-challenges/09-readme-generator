@@ -1,10 +1,10 @@
 # README Generator
 ## Description
-A README Generator that doesn’t suck.
+The best README generator -- ever!
 
 <!-- if appropriate, add a screenshot ![image-alt](image-url) -->
 
-![GNU GPLv3 License Badge](https://img.shields.io/github/license/areas-boot-camp/09-readme-generator)
+![MIT License Badge](https://img.shields.io/github/license/areas-boot-camp/09-readme-generator)
 
 
 ## Table of Contents
@@ -19,9 +19,9 @@ A README Generator that doesn’t suck.
 
 
 ## Features
-- Generates a professional, comprehensive README.
-- Includes a LICENSE.
-- Provides you with boilerplate content and guidance.
+- Generates a README for you.
+- Generates a LICENSE file for you too.
+- Provides boilerplate content and guidance.
 
 
 ## Installation
@@ -29,25 +29,24 @@ Clone the repo and run `npm install`.
 
 
 ## Usage
-Run `node index.js` and follow the prompts. Then, move the README and LICENSE files to your project.
+Run `node index.js` and follow the prompts.
 
 
 ## Contribute
-Open a PR or send me a message.
+Open a PR or send me an email.
 
 
 ## Tests
-Try it before you open a PR.
 
 
 ## Credits
 - Node.js
 - Inquirer
-- UC Berkelely Boot Camp
+- UC Berkeley Boot Camp
 
 
 ## License
-See [LICENSE (GNU GPLv3)](./LICENSE).
+See [LICENSE (MIT)](./LICENSE).
 
 
 ## Questions
