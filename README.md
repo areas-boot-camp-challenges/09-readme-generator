@@ -1,6 +1,6 @@
 # README Generator
 ## Description
-A README Generator that doesn’t suck.
+A README Generator that doesn’t suck. To see it in action, see [the walkthrough video](https://drive.google.com/file/d/1mhQmO5RbNGBUYB4bA78Q8JLsONsG2yFL/view).
 
 <!-- if appropriate, add a screenshot ![image-alt](image-url) -->
 
