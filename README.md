@@ -4,7 +4,7 @@ A README Generator that doesn’t suck.
 
 <!-- if appropriate, add a screenshot ![image-alt](image-url) -->
 
-{![GNU GPLv3 License Badge](https://img.shields.io/github/license/areas-boot-camp/09-readme-generator)}
+![GNU GPLv3 License Badge](https://img.shields.io/github/license/areas-boot-camp/09-readme-generator)
 
 
 ## Table of Contents
