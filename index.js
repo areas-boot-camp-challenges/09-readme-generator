@@ -122,14 +122,14 @@ function promptAndWrite() {
     for (const [key, value] of Object.entries(answers)) {
       template = template.replaceAll(`{${key}}`, value)
     }
-    // Write the new README to the output folder.
-    fs.writeFileSync("./output/README.md", template)
     // Copy the appropriate LICENSE to the output folder.
     if (answers.license === "GNU GPLv3") {
       fs.copyFileSync("./input/licenses/GNU GPLv3", "./output/LICENSE")
     } else if (answers.license === "MIT") {
       fs.copyFileSync("./input/licenses/MIT", "./output/LICENSE")
     }
+    // Write the new README to the output folder.
+    fs.writeFileSync("./output/README.md", template)
     // Print a thank-you message and summary.
     console.log(
       "Thank you for using the README Generator. Your README and LICENSE are in the output/ folder!\n" +
